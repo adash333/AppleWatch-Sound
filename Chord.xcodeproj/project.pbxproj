@@ -15,6 +15,9 @@
 		000EC3572714728D00CCA5C2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000EC3562714728D00CCA5C2 /* ComplicationController.swift */; };
 		000EC3592714728D00CCA5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000EC3582714728D00CCA5C2 /* Assets.xcassets */; };
 		000EC35C2714728D00CCA5C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000EC35B2714728D00CCA5C2 /* Preview Assets.xcassets */; };
+		000EC36B27147EB300CCA5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000EC3582714728D00CCA5C2 /* Assets.xcassets */; };
+		000EC36D27147EB500CCA5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000EC3582714728D00CCA5C2 /* Assets.xcassets */; };
+		000EC36F271484B800CCA5C2 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000EC36E271484B800CCA5C2 /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,7 @@
 		000EC3582714728D00CCA5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000EC35B2714728D00CCA5C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		000EC35D2714728D00CCA5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000EC36E271484B800CCA5C2 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				000EC3522714728D00CCA5C2 /* ContentView.swift */,
+				000EC36E271484B800CCA5C2 /* SoundPlayer.swift */,
 				000EC3542714728D00CCA5C2 /* ChordApp.swift */,
 				000EC3562714728D00CCA5C2 /* ComplicationController.swift */,
 				000EC3582714728D00CCA5C2 /* Assets.xcassets */,
@@ -197,9 +202,11 @@
 				TargetAttributes = {
 					000EC33D2714728C00CCA5C2 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					000EC3412714728C00CCA5C2 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					000EC34C2714728D00CCA5C2 = {
 						CreatedOnToolsVersion = 13.0;
@@ -231,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000EC36B27147EB300CCA5C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000EC36D27147EB500CCA5C2 /* Assets.xcassets in Resources */,
 				000EC3482714728D00CCA5C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +269,7 @@
 			files = (
 				000EC3552714728D00CCA5C2 /* ChordApp.swift in Sources */,
 				000EC3532714728D00CCA5C2 /* ContentView.swift in Sources */,
+				000EC36F271484B800CCA5C2 /* SoundPlayer.swift in Sources */,
 				000EC3572714728D00CCA5C2 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +474,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TQZ56LF75L;
@@ -471,12 +482,18 @@
 				IBSC_MODULE = Chord_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Chord WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = adash333.Chord.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -489,6 +506,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TQZ56LF75L;
@@ -496,6 +514,11 @@
 				IBSC_MODULE = Chord_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Chord WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = adash333.Chord.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,12 +534,19 @@
 		000EC3692714728D00CCA5C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TQZ56LF75L;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = adash333.Chord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -524,9 +554,15 @@
 		000EC36A2714728D00CCA5C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TQZ56LF75L;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = adash333.Chord;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    //　音を鳴らすためのsoundPlayerクラスのインスタンスを生成
+    let soundPlayer = SoundPlayer()
+    
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            Text("音符をタップ！")
+            Image("c")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .onTapGesture {
+                    soundPlayer.cPlay()
+                }
+            Image("f")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .onTapGesture {
+                    soundPlayer.fPlay()
+                }
+            Image("g")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .onTapGesture {
+                    soundPlayer.gPlay()
+                }
+        }
     }
 }
 
